@@ -36,6 +36,7 @@ global.set_info_from_marker = function(latlng) {
     $("#lng").val(lng);
     var room = areas.get_room([lng, lat]);
     if (room !== null) {
+        $("#description").val(room.name);
         $("#number").val(get_next_free_dp_num(room.level));
         $("input[name='level'][value=" + room.level + "]").prop("checked", true);
     } else {
