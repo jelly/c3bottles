@@ -88,9 +88,8 @@ def dp_label(number=None):
 @c3bottles.route("/label/all.pdf")
 def dp_all_labels():
     output = PdfFileWriter()
-    for dp in db.session.query(DropPoint).all():
-        if not dp.removed:
-            output.addPage(PdfFileReader(IO(_pdf(dp.number))).getPage(0))
+    for dp in range(1,200):
+        output.addPage(PdfFileReader(IO(_pdf(dp))).getPage(0))
     f = IO()
     output.write(f)
     return Response(
@@ -98,9 +97,22 @@ def dp_all_labels():
         mimetype="application/pdf"
     )
 
+#@c3bottles.route("/label/all.pdf")
+#def dp_all_labels():
+#    output = PdfFileWriter()
+#    for dp in db.session.query(DropPoint).all():
+#        if not dp.removed:
+#            output.addPage(PdfFileReader(IO(_pdf(dp.number))).getPage(0))
+#    f = IO()
+#    output.write(f)
+#    return Response(
+#        f.getvalue(),
+#        mimetype="application/pdf"
+#    )
+
 
 def _pdf(number):
-    img = qrcode.make(request.url_root + str(number))
+    img = qrcode.make('https://waste.sha2017.org/' + str(number))
     f = IO()
     img.save(f)
     b64 = b64encode(f.getvalue()).decode("utf-8")

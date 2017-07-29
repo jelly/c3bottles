@@ -1,0 +1,47 @@
+<VRTDataset rasterXSize="16384" rasterYSize="16384">
+  <Metadata />
+  <VRTRasterBand dataType="Byte" band="1">
+    <Metadata />
+    <ColorInterp>Red</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">map_sq.png</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16384" RasterYSize="16384" DataType="Byte" BlockXSize="16384" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+      <DstRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="2">
+    <Metadata />
+    <ColorInterp>Green</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">map_sq.png</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="16384" RasterYSize="16384" DataType="Byte" BlockXSize="16384" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+      <DstRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="3">
+    <Metadata />
+    <ColorInterp>Blue</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">map_sq.png</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="16384" RasterYSize="16384" DataType="Byte" BlockXSize="16384" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+      <DstRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="4">
+    <Metadata />
+    <ColorInterp>Alpha</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">map_sq.png</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="16384" RasterYSize="16384" DataType="Byte" BlockXSize="16384" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+      <DstRect xOff="0" yOff="0" xSize="16384" ySize="16384" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>
